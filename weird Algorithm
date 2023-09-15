@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+#define int long long
+const int MOD=1e9+7;
+using namespace std;
+int seq(int n){
+    if(n==1) return 1;
+    if(n%2!=0){
+        cout<<n<<" ";
+        seq(3*n+1);
+    }
+    else{
+        cout<<n<<" ";
+        seq(n/2);
+    }
+return 1;
+}
+signed main() {
+    int n;
+    cin>>n;
+   cout<<seq(n);
+    return 0;
+}
